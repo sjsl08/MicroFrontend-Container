@@ -34,7 +34,7 @@
   -->
 
   <script type="systemjs-importmap" 
-
+  
   src="https://json-na1e.onrender.com/">
   </script>
 
@@ -54,14 +54,10 @@
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
   <% if (isLocal) { %>
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@app/root-config": "http://localhost:9000/app-root-config.js",
-        "@app/react":"http://localhost:8080/app-react.js"
-      }
-    }
-  </script>
+    <script type="systemjs-importmap" 
+
+    src="https://json-na1e.onrender.com/">
+    </script>
   <% } %>
 
   <!--
