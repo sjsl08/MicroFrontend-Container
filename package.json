@@ -1,6 +1,6 @@
 {
   "name": "@app/root-config",
-  "homepage": "https://github.com/sjsl08/MicroFrontend-Container",
+  "homepage": "  http://sjsl08.github.io/MicroFrontend-Container",
 
   "scripts": {
     "start": "node server.js",
