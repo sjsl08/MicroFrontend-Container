@@ -12,6 +12,7 @@
     browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
   -->
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.4/dist/zone.min.js"></script>
 
   <!--
     This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
@@ -31,14 +32,21 @@
 
     More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
   -->
+
+  <script type="systemjs-importmap" 
+
+  src="
+  https://raw.githubusercontent.com/sjsl08/MicroFrontend-Container/gh-pages/importmap.json
+  ">
+  </script>
+
   <script type="systemjs-importmap">
     {
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
-        "@app/root-config": "https://cdn.jsdelivr.net/gh/sjsl08/MicroFrontend-Container@gh-pages/app-root-config.js",
-        "@app/react": "https://cdn.jsdelivr.net/gh/sjsl08/Microfrontend-react@gh-pages/app-react.js"
-
-
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
+        "rxjs": "https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.4.0/rxjs.umd.min.js"
       }
     }
   </script>
@@ -51,8 +59,6 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",
-"react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",
         "@app/root-config": "http://localhost:9000/app-root-config.js",
         "@app/react":"http://localhost:8080/app-react.js"
       }
