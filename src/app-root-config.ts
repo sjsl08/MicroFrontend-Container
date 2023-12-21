@@ -4,6 +4,7 @@ import {
   constructRoutes,
   constructLayoutEngine,
 } from "single-spa-layout";
+
 import microfrontendLayout from "./microfrontend-layout.html";
 
 const routes = constructRoutes(microfrontendLayout);
@@ -15,6 +16,14 @@ const applications = constructApplications({
 });
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
+// registerApplication(
+//   "@app/react",
+//   () => System.import("@app/react"),
+//   (location) => true
+// );
+
+
+
 applications.forEach(registerApplication);
-layoutEngine.activate();
+// layoutEngine.activate();
 start();
